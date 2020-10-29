@@ -2145,6 +2145,12 @@ class DTableWebAPI {
     }
     return this.req.post(url);
   }
+
+  getScriptResult(dtableUuid, scriptName, scriptID) {
+    const url = this.server + `/api/v2.1/dtable/${dtableUuid}/run-script/${scriptName}/${scriptID}/`;
+    return this.req.get(url);
+  }
+
 }
 
 export default DTableWebAPI;
